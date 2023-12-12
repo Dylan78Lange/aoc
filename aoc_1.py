@@ -48,9 +48,9 @@ def open_file(filename):
     # Open the file for reading
     with open(filename, 'r') as file:
         # Read the contents of the file
-        contents = file.read()
+        contents = file.read().split('\n')
     # Return the contents
-    print(f"The contents of the file are: {contents}")
+    # print(f"The contents of the file are: {contents}")
     return contents
 
 # Define a function to create a list of string from sample data for development and testing purposes
@@ -72,14 +72,14 @@ def create_strings_list():
 
 #answer = 0
 # create a list of strings from sample data for development and testing purposes
-strings_list = create_strings_list()
+# strings_list = create_strings_list()
 
 # use input file instead of sample data for development and testing purposes
 # stringsfromfile = open_file('day1-inputs.txt')
-# strings = open_file('day1-inputs.txt')
+strings_list = open_file('day1-inputs.txt')
 
 # print the list of strings (DEBUG when needed)
-# print(strings) 
+print(strings_list)
 # print the sum of the numbers in each string in the list
 answer = add_numbers_list(strings_list)
 
